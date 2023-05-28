@@ -1,13 +1,11 @@
-mod variables {
-    pub mod main;
-}
+mod datos_primitivos; 
+mod structs; 
+mod implements; 
 
-mod structs {
-    pub mod main;
-}
 
 fn main() {
-    variables::main::main_variables();
-    let user1: structs::main::USER = structs::main::main_structs(String::from("cafesito"), 1);
+    datos_primitivos::main();
+    let user1: structs::USER = structs::create_user(String::from("vitalik"), 1);
     println!("{} {}", user1.name, user1.age);
+    implements::main();
 }
