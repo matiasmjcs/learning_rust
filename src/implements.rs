@@ -7,6 +7,6 @@ impl structs::USER {
 }
 
 pub fn main() {
-    let user1 = structs::create_user(String::from("vitalik"), 1);
+    let user1: structs::USER = structs::create_user(String::from("vitalik"), 1);
     user1.print_info();
 }
